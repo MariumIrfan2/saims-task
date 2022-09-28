@@ -1,9 +1,21 @@
-.background{
-    background-image: url(https://html.themexriver.com/Saasio/assets/img/res/d1.jpg);
+.square{
+    width: 400px;
+    height: 400px;
+    background-color:Red;
+    border: 2px black solid;
+}
+.rectangle{
+        width: 400px;
+        height: 200px;
+        background-color: blue;
+        border: 2px black solid;
     
 }
-.beige{
-    color: white;
-    background-color:#c9ab81;
-    border: none;
+
+.circle{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: greenyellow;
+    border: 2px black solid;
 }
