@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Image Slider</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
 <body>
-    <div id="shapes" class="square">
+    <div class="main">
+        <div class="box">
+            <img id="img" src="images/img1.jpg" alt="">
+        </div>
+
+
+        <button onclick="prev('img','images/img2.jpg')" class="btn"><i class="fa-solid fa-backward"></i></button>
+        <button onclick="prev('img','images/img3.jpg')" class="btn"><i class="fa-solid fa-forward"></i></button>
 
     </div>
-    <button onclick="squareShape()">SQUARE</button>
-    <button onclick="rectangleShape()">RECTANGLE</button>
-    <button onclick="circleShape()">CIRCLE</button>
 
-
-
-
-
-    
 
     <script src="app.js"></script>
 </body>
