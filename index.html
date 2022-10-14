@@ -5,22 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Slider</title>
+    <title>ToDo App</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 
 <body>
-    <div class="main">
-        <div class="box">
-            <img id="img" src="images/img1.jpg" alt="">
-        </div>
-
-
-        <button onclick="prev('img','images/img2.jpg')" class="btn"><i class="fa-solid fa-backward"></i></button>
-        <button onclick="prev('img','images/img3.jpg')" class="btn"><i class="fa-solid fa-forward"></i></button>
+    <h1>ToDo App</h1>
+    <div id="parent">
 
     </div>
+    <input type="text" id="inp">
+    <br>
+    <br>
+    <button onclick="add()" class="btn">Add</button>
+    <button onclick="delAll()">delete All</button>
+
+
+
+
+
+
 
 
     <script src="app.js"></script>

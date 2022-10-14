@@ -1,102 +1,55 @@
-var img = document.getElementById("img");
+function add() {
+    var parent = document.getElementById('parent');
 
-// var imgArray = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg"];
-// var i = 0;
+    var p = document.createElement('P');
+    var text = document.getElementById('inp').value;
+    var txtNode = document.createTextNode(text);
 
+    p.appendChild(txtNode)
 
-// function previous() {
-//     for (i = 0; i < imgArray.lenght; i++) {
-//         i = imgArray[i];
-//     }
-// }
+    parent.appendChild(p)
 
+    document.getElementById('inp').value = "";
 
-function prev(id,src){
-    img.src = src;
+    var button = document.createElement('BUTTON');
+    var btntxt = "Delete";
+    btntxt = document.createTextNode(btntxt);
+
+    button.appendChild(btntxt);
+
+    button.setAttribute('onclick', 'remove(this)')
+
+    p.appendChild(button)
+
+    var editButton = document.createElement('BUTTON');
+    var edittxt = "Edit";
+    edittxt = document.createTextNode(edittxt);
+
+    editButton.appendChild(edittxt);
+
+    editButton.setAttribute('onclick', 'editval(this)')
+
+    p.appendChild(editButton);
 
 }
 
 
+function remove(element) {
+    element.parentNode.remove()
+    console.log(element)
+}
+function delAll() {
+    var parent = document.getElementById('parent');
 
+    parent.innerHTML = "";
 
+}
 
+function editval(element) {
+    var val = element.parentNode.firstChild.nodeValue;
 
+    console.log(element.parentNode.firstChild.nodeValue);
+    var newval = prompt("Enter new value", val);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function previous() {
-//     if (i <= 0) {
-//         i++;
-//         i= imgArray[i];
-
-//         // return otherImgs();
-
-//     }
-// }
-
-
-
-
-// function next() {
-//     if (i >= images.lenght - 1) {
-//         i = -1;
-//         i++;
-
-//         return otherImgs()
-//     }
-
-// }
-
-// function otherImgs(i) {
-//     return img;
-// }
-
-
-// function slideshow() {
-//     var slides = document.getElementsByClassName("slides");
-
-//     slides[num].getElementsByClassName.display = block;
-
-// }
-
-// var i = 0;
-// function control(x) {
-
-//     i = i + x;
-
-// }
-
-
-
-// var slides = document.getElementsByClassName("slides")
-
-
-// function changeImage() {
-//     console.log("slides");
-
-//     for (i = 0; i < images.length; i++) {
-
-
-//     }
-// }
+    element.parentNode.firstChild.nodeValue = newval;
+}
